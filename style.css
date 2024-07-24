@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins','sans-serif';
+}
+#wrapper{
+    background-image: linear-gradient(-45deg, red,rgb(132, 0, 255),red);
+    width: 100%;
+    height: 100vh;
+    background-size: 450% 450%;
+    animation: bg-animation 8s ease-in-out infinite;
+    display: grid;
+    place-items: center;
+}
+@keyframes bg-animation{
+    0%{
+        background-position: 0 0%;
+    }
+    50%{
+        background-position: 0 100%;
+    }
+    100%{
+        background-position: 0 0%;
+    }
+}
+
+.game-info{
+    color: white;
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid  rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 3rem;
+    text-align: center;
+}
+
+.tic-tac-toe{
+
+    width: 90%;
+    max-width: 20rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid  rgba(255, 255, 255, 0.25);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio : 1/1;
+}
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    cursor: pointer;
+    font-size: 3rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box1,.box2,.box4,.box5{
+    border-right: 1px solid  rgba(255, 255, 255, 1);
+    border-bottom: 1px solid  rgba(255, 255, 255, 1);
+}
+.box3 , .box6{
+    border-bottom: 1px solid  rgba(255, 255, 255, 1);
+}
+.box7 , .box8 {
+    border-right: 1px solid  rgba(255, 255, 255, 1);
+}
+
+.btn{
+    color: white;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem;
+    border: 1px solid  rgba(255, 255, 255, 0.25);
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.btn.active{
+    display: flex;
+}
+
+.win{
+    background-color: rgba(0, 255, 0, 0.616);
+}
